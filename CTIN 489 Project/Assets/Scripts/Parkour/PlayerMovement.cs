@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInput;
     private bool isGrounded;
-    public Color cleanWindow;
     private Vector3 respawnPoint;
 
     public WaterManager waterMan;
@@ -32,10 +31,14 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+        // Respawning
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = respawnPoint;
         }
+
+        // Check if fallen
+        if (transform.position.y <= -5) transform.position = respawnPoint;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -48,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // picking up water
         if (collision.gameObject.CompareTag("Water"))
         {
             Destroy(collision.transform.parent.gameObject);
@@ -55,15 +59,10 @@ public class PlayerMovement : MonoBehaviour
             playerAudio.PlayPickupWater();
         }
 
-        if (collision.gameObject.CompareTag("Window") && waterMan.canClean())
+        // cleaning window **if** the window is uncleaned
+        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && !collision.gameObject.GetComponent<Window>().isClean())
         {
-            SpriteRenderer sr = collision.GetComponent<SpriteRenderer>();
-
-            if (sr != null)
-            {
-                sr.color = cleanWindow; 
-            }
-
+            collision.gameObject.GetComponent<Window>().CleanWindow();
             waterMan.clearWater();
             playerAudio.PlayCleanWindow();
             respawnPoint = transform.position;

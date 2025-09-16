@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sriya_Original_Prototype.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Week4_Prototype.unity
+    guid: 9768294002cf2d44c8917bf0edb511a2
+  - enabled: 1
+    path: Assets/Scenes/LaurenPrototype1.unity
+    guid: 2eb79e7ef3efc47bdb38119b16e52576
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

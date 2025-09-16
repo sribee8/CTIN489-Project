@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndPanelController : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class EndPanelController : MonoBehaviour
     public DirtLayer2D dirt;
     public GameObject endPanel;
     public TextMeshProUGUI summaryText;
-    public Button resetButton;
+    public Button returnButton;
     public RectTransform hudRoot;
 
     [Header("Finish rule")]
@@ -25,7 +26,7 @@ public class EndPanelController : MonoBehaviour
     void Start()
     {
         if (endPanel) endPanel.SetActive(false);
-        if (resetButton) resetButton.onClick.AddListener(OnReset);
+        if (returnButton) returnButton.onClick.AddListener(OnReturn);
         shown = false;
     }
 
@@ -60,11 +61,9 @@ public class EndPanelController : MonoBehaviour
         return 1f - Mathf.Clamp01((float)off / path);
     }
 
-    void OnReset()
+    void OnReturn()
     {
-        shown = false;
-        if (endPanel) endPanel.SetActive(false);
-        if (hudRoot) hudRoot.gameObject.SetActive(true);
-        if (dirt) dirt.ResetPane();
+        Debug.Log("on return called");
+        SceneManager.UnloadSceneAsync("LaurenPrototype1");
     }
 }
