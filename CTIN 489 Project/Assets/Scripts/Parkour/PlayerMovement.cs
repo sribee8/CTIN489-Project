@@ -43,9 +43,13 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            isGrounded = true;
+            // Ground should have an upward normal
+            if (contact.normal.y > 0.5f)
+            {
+                isGrounded = true;
+            }
         }
     }
 
