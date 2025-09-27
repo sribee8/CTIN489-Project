@@ -5,10 +5,12 @@ public class Window : MonoBehaviour
 {
     bool cleaned;
     public Color cleanWindow;
+    public GameObject windowMinigame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cleaned = false;
+        windowMinigame.SetActive(false);
     }   
 
     // Update is called once per frame
@@ -20,7 +22,6 @@ public class Window : MonoBehaviour
     public void CleanWindow()
     {
         // Load minigame and then change window color
-        LoadWindowCleaning();
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
 
         if (sr != null)
@@ -36,6 +37,12 @@ public class Window : MonoBehaviour
 
     public void LoadWindowCleaning()
     {
-        SceneManager.LoadScene("LaurenPrototype1", LoadSceneMode.Additive);
+        windowMinigame.SetActive(true);
+    }
+
+    public void CompleteMinigame()
+    {
+        if (windowMinigame) windowMinigame.SetActive(false);
+        CleanWindow();
     }
 }

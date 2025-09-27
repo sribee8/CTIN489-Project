@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fccad83cbe182240b71c6704f2aa246
+guid: c788e43f02ed9764ab385dcaea2c4a45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5180618666522255689
-    second: SqueegeeArt_0
+      213: 7612135089760566114
+    second: poop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SqueegeeArt_0
+      name: poop_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 87
-        width: 664
-        height: 642
-      alignment: 9
-      pivot: {x: 0.54907197, y: 0.8979078}
+        x: 184
+        y: 828
+        width: 3061
+        height: 2158
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94121d6aa3145e740800000000000000
-      internalID: 5180618666522255689
+      spriteID: 26bf677888cb3a960800000000000000
+      internalID: 7612135089760566114
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5816dfac49550ea4ea9cc261f3d2c730
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SqueegeeArt_0: 5180618666522255689
+      poop_0: 7612135089760566114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

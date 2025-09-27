@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,11 +14,17 @@ public class PlayerMovement : MonoBehaviour
 
     public WaterManager waterMan;
     public PlayerAudio playerAudio;
+    public GameObject cleanWindowText;
+
+    private Window currWindow;
+    private bool nearWindow;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        cleanWindowText.SetActive(false);
+        nearWindow = false;
     }
 
     void Update()
@@ -39,6 +47,21 @@ public class PlayerMovement : MonoBehaviour
 
         // Check if fallen
         if (transform.position.y <= -5) transform.position = respawnPoint;
+
+        if (Input.GetKeyDown(KeyCode.E) && nearWindow)
+        {
+            CleanWindow();
+            cleanWindowText.SetActive(false);
+        }
+    }
+
+    void CleanWindow()
+    {
+        waterMan.clearWater();
+        playerAudio.PlayCleanWindow();
+        respawnPoint = transform.position;
+        jumpForce += 1f;
+        currWindow.LoadWindowCleaning();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -66,13 +89,22 @@ public class PlayerMovement : MonoBehaviour
         // cleaning window **if** the window is uncleaned
         if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && !collision.gameObject.GetComponent<Window>().isClean())
         {
-            collision.gameObject.GetComponent<Window>().CleanWindow();
-            waterMan.clearWater();
-            playerAudio.PlayCleanWindow();
-            respawnPoint = transform.position;
-            jumpForce += 1f;
+            cleanWindowText.SetActive(true);
+            currWindow = collision.gameObject.GetComponent<Window>();
+            nearWindow = true;
+
         }
     }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Window"))
+        {
+            if (cleanWindowText != null)
+                cleanWindowText.SetActive(false);
+            nearWindow = false;
+        }
+    }
+
 
     void OnCollisionExit2D(Collision2D collision)
     {
