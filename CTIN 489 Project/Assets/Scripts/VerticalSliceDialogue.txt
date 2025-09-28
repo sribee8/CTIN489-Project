@@ -1,0 +1,12 @@
+[Intro]
+I guess this window looks pretty dirty, I should probably clean it
+
+[Window1]
+You: This person seems to have really neglected this…
+NPC: "Thank you for doing this!"
+NPC: "You’re always so helpful!"
+
+[Window1Fin]
+Oh wow, I haven’t seen Teddy in ages
+I still remember when her daughter asked for it
+I mean how could I say no!

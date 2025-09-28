@@ -5,18 +5,33 @@ public class Window : MonoBehaviour
 {
     bool cleaned;
     public Color cleanWindow;
-    public GameObject windowMinigame;
+    public GameObject windowBG;
+    public GameObject windowGraffiti;
+    public GameObject squeegee;
+    public DialogueManager dialogueManager;
+    public int windowNum;
+    private string sectionName;
+    private string sectionFinish;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cleaned = false;
-        windowMinigame.SetActive(false);
-    }   
+        windowBG.SetActive(false);
+        windowGraffiti.SetActive(false);
+        squeegee.SetActive(false);
+        sectionName = "Window" + windowNum;
+        sectionFinish = "Window" + windowNum + "Fin";
+        Debug.Log(sectionFinish);
+        Debug.Log(sectionName);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (cleaned && dialogueManager.CurrentSection == sectionFinish && !dialogueManager.IsDialogueActive)
+        {
+            windowBG.SetActive(false);
+        }
     }
 
     public void CleanWindow()
@@ -37,12 +52,17 @@ public class Window : MonoBehaviour
 
     public void LoadWindowCleaning()
     {
-        windowMinigame.SetActive(true);
+        windowBG.SetActive(true);
+        windowGraffiti.SetActive(true);
+        squeegee.SetActive(true);
+        dialogueManager.StartSection(sectionName);
     }
 
     public void CompleteMinigame()
     {
-        if (windowMinigame) windowMinigame.SetActive(false);
+        windowGraffiti.SetActive(false);
+        squeegee.SetActive(false);
+        dialogueManager.StartSection(sectionFinish);
         CleanWindow();
     }
 }
