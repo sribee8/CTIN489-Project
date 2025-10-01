@@ -7,9 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;      // Speed of player movement
     public float jumpForce = 12f;     // Force applied when jumping
+    public float climbSpeed = 4f;
     private Rigidbody2D rb;
-    private float moveInput;
+    private float horizontal;
+    private float vertical;
     private bool isGrounded;
+    private bool isClimbing;
     private Vector3 respawnPoint;
 
     public WaterManager waterMan;
@@ -25,13 +28,15 @@ public class PlayerMovement : MonoBehaviour
         respawnPoint = transform.position;
         cleanWindowText.SetActive(false);
         nearWindow = false;
+        isClimbing = false;
     }
 
     void Update()
     {
         // Horizontal movement
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");      // W/S
+
 
         // Jumping
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -53,6 +58,27 @@ public class PlayerMovement : MonoBehaviour
             CleanWindow();
             cleanWindowText.SetActive(false);
         }
+
+        if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+
+            if (vertical != 0)
+            {
+                // Actively climbing
+                rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * climbSpeed);
+            }
+            else
+            {
+                // Idle on ladder (don’t fall, don’t slide down)
+                rb.linearVelocity = new Vector2(horizontal * moveSpeed, 0f);
+            }
+        }
+        else
+        {
+            rb.gravityScale = 1f;
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+        }
     }
 
     void CleanWindow()
@@ -60,7 +86,6 @@ public class PlayerMovement : MonoBehaviour
         waterMan.clearWater();
         playerAudio.PlayCleanWindow();
         respawnPoint = transform.position;
-        jumpForce += 1f;
         currWindow.LoadWindowCleaning();
     }
 
@@ -94,6 +119,12 @@ public class PlayerMovement : MonoBehaviour
             nearWindow = true;
 
         }
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            isClimbing = true;
+        }
+
     }
     void OnTriggerExit2D(Collider2D collision)
     {
@@ -102,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
             if (cleanWindowText != null)
                 cleanWindowText.SetActive(false);
             nearWindow = false;
+        }
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            isClimbing = false;
         }
     }
 

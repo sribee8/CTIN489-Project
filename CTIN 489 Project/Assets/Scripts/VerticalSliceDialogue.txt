@@ -7,6 +7,25 @@ NPC: "Thank you for doing this!"
 NPC: "You’re always so helpful!"
 
 [Window1Fin]
-Oh wow, I haven’t seen Teddy in ages
-I still remember when her daughter asked for it
-I mean how could I say no!
+You: Oh wow, I haven’t seen Teddy in ages
+You: I still remember when her daughter asked for it
+You: I mean how could I say no!
+NPC: "Wow the window looks perfect!"
+NPC: "I think the cafe owner also needed their window cleaned..."
+You: "Ah, ok! I will be right on that!"
+
+[Window2]
+You: Why do people always vandalize...
+You: It makes my life so much harder
+Cafe Owner: "Sorry.. I need to keep better watch."
+You: "No worries!"
+You: "It keeps me in business I guess"
+
+[Window2Fin]
+You: Oh wow, that looks really fun.
+You: I wish I could've joined my friends..
+You: But they invited me after I already started work.
+
+[Tree]
+You: I think that water drop is stuck in that tree
+You: Maybe if I could shake it? [E]

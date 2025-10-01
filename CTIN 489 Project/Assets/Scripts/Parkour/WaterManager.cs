@@ -4,19 +4,19 @@ using UnityEngine.UI;
 public class WaterManager : MonoBehaviour
 {
     private int numWater = 0;
-    public Slider waterSlider;
     private int maxWater = 2;
+
+    public Image bottle;          // assign this in the inspector
+    public Sprite [] watSprites;
 
     void Start()
     {
-        waterSlider.maxValue = maxWater;
-        waterSlider.value = numWater;
     }
 
     public void addWater()
     {
         numWater++;
-        waterSlider.value = numWater;
+        bottle.sprite = watSprites[Mathf.Min(numWater, 2)];
     }
 
     public bool canClean()
@@ -26,7 +26,7 @@ public class WaterManager : MonoBehaviour
 
     public void clearWater()
     {
-        numWater = 0;
-        waterSlider.value = numWater;
+        numWater -= 2;
+        bottle.sprite = watSprites[numWater];
     }
 }

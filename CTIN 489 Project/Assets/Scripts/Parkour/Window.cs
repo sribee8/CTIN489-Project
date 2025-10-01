@@ -8,10 +8,12 @@ public class Window : MonoBehaviour
     public GameObject windowBG;
     public GameObject windowGraffiti;
     public GameObject squeegee;
+    public GameObject bottle;
     public DialogueManager dialogueManager;
     public int windowNum;
     private string sectionName;
     private string sectionFinish;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,6 +57,7 @@ public class Window : MonoBehaviour
         windowBG.SetActive(true);
         windowGraffiti.SetActive(true);
         squeegee.SetActive(true);
+        bottle.SetActive(false);
         dialogueManager.StartSection(sectionName);
     }
 
@@ -63,6 +66,7 @@ public class Window : MonoBehaviour
         windowGraffiti.SetActive(false);
         squeegee.SetActive(false);
         dialogueManager.StartSection(sectionFinish);
+        bottle.SetActive(true);
         CleanWindow();
     }
 }
