@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 7e1be177a4e4fbc4ab8594399c31704c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2494609234815295168
+    second: Grafitti_Window_LVL1_0
+  - first:
+      213: -2777914520782430160
+    second: Grafitti_Window_LVL1_1
+  - first:
+      213: -3142525948534508000
+    second: Grafitti_Window_LVL1_2
+  - first:
+      213: -4421226368812094257
+    second: Grafitti_Window_LVL1_3
+  - first:
+      213: 440666742719121064
+    second: Grafitti_Window_LVL1_4
+  - first:
+      213: 2268693880298599156
+    second: Grafitti_Window_LVL1_5
+  - first:
+      213: 1001598075353565974
+    second: Grafitti_Window_LVL1_6
+  - first:
+      213: 6405632115873736550
+    second: Grafitti_Window_LVL1_7
+  - first:
+      213: 840077845620860214
+    second: Grafitti_Window_LVL1_8
+  - first:
+      213: -2353065270554668769
+    second: Grafitti_Window_LVL1_9
+  - first:
+      213: -7455864397994013059
+    second: Grafitti_Window_LVL1_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_0
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 748
+        width: 452
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041ec613e1e516dd0800000000000000
+      internalID: -2494609234815295168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_1
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1161
+        width: 215
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0302d5c167dd279d0800000000000000
+      internalID: -2777914520782430160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_2
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0263724bc418364d0800000000000000
+      internalID: -3142525948534508000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_3
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1157
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc6d5fca06a4a2c0800000000000000
+      internalID: -4421226368812094257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_4
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1148
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a60a1851109d1600800000000000000
+      internalID: 440666742719121064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_5
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1154
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2fc4760150c7f10800000000000000
+      internalID: 2268693880298599156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1072
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b0a21942466ed00800000000000000
+      internalID: 1001598075353565974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 1069
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667ec7c887065e850800000000000000
+      internalID: 6405632115873736550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_8
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1059
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63528e3895e88ab00800000000000000
+      internalID: 840077845620860214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_9
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1029
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11d74f7a9b385fd0800000000000000
+      internalID: -2353065270554668769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grafitti_Window_LVL1_10
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 1013
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ec51835d2778890800000000000000
+      internalID: -7455864397994013059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Grafitti_Window_LVL1_0: -2494609234815295168
+      Grafitti_Window_LVL1_1: -2777914520782430160
+      Grafitti_Window_LVL1_10: -7455864397994013059
+      Grafitti_Window_LVL1_2: -3142525948534508000
+      Grafitti_Window_LVL1_3: -4421226368812094257
+      Grafitti_Window_LVL1_4: 440666742719121064
+      Grafitti_Window_LVL1_5: 2268693880298599156
+      Grafitti_Window_LVL1_6: 1001598075353565974
+      Grafitti_Window_LVL1_7: 6405632115873736550
+      Grafitti_Window_LVL1_8: 840077845620860214
+      Grafitti_Window_LVL1_9: -2353065270554668769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

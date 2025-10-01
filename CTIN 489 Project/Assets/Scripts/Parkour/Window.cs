@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Window : MonoBehaviour
 {
     bool cleaned;
-    public Color cleanWindow;
+    public GameObject graffitiRM;
     public GameObject windowBG;
     public GameObject windowGraffiti;
     public GameObject squeegee;
@@ -41,10 +41,7 @@ public class Window : MonoBehaviour
         // Load minigame and then change window color
         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
 
-        if (sr != null)
-        {
-            sr.color = cleanWindow;
-        }
+        graffitiRM.SetActive(false);
         cleaned = true;
 
 
