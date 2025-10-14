@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerAudio playerAudio;
     public GameObject cleanWindowText;
 
+
     private Window currWindow;
     private bool nearWindow;
 

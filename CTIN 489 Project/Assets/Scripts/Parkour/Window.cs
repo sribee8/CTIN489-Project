@@ -14,6 +14,8 @@ public class Window : MonoBehaviour
     private string sectionName;
     private string sectionFinish;
 
+    public PlayerMovement player;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +58,7 @@ public class Window : MonoBehaviour
         squeegee.SetActive(true);
         bottle.SetActive(false);
         dialogueManager.StartSection(sectionName);
+        player.enabled = false;
     }
 
     public void CompleteMinigame()
@@ -65,5 +68,6 @@ public class Window : MonoBehaviour
         dialogueManager.StartSection(sectionFinish);
         bottle.SetActive(true);
         CleanWindow();
+        player.enabled = true;
     }
 }

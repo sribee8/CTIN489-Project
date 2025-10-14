@@ -11,13 +11,12 @@ public class DialogueManager : MonoBehaviour
     public TextAsset dialogueFile;
 
     [Header("Dialogue Settings")]
-    public float typingSpeed = 0.05f;   // Speed of typing
-    public float lineDelay = 1.5f;      // Pause before next line auto-plays
+    public float typingSpeed = 0.05f;
 
     private Dictionary<string, List<string>> dialogueSections = new();
     private List<string> currentSection;
     private int index;
-    private bool isActive = false;
+    private bool isTyping = false;
     private Coroutine typingCoroutine;
 
     public bool IsDialogueActive => dialoguePanel.activeSelf;
@@ -29,10 +28,17 @@ public class DialogueManager : MonoBehaviour
         if (dialogueFile != null) LoadDialogue(dialogueFile);
     }
 
+    void Update()
+    {
+        if (IsDialogueActive && Input.GetKeyDown(KeyCode.T))
+        {
+            OnSpacePressed();
+        }
+    }
+
     public void LoadDialogue(TextAsset textFile)
     {
         dialogueSections.Clear();
-
         string[] lines = textFile.text.Split('\n');
         string currentKey = "Default";
         dialogueSections[currentKey] = new List<string>();
@@ -70,39 +76,54 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
     private void ShowLine()
     {
-        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
         typingCoroutine = StartCoroutine(TypeLine(currentSection[index]));
     }
 
     private IEnumerator TypeLine(string line)
     {
+        isTyping = true;
         dialogueText.text = "";
+
         foreach (char c in line)
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        // Wait before auto-progressing
-        yield return new WaitForSeconds(lineDelay);
+        isTyping = false;
+    }
 
-        index++;
-        if (index < currentSection.Count)
+    private void OnSpacePressed()
+    {
+        if (isTyping)
         {
-            ShowLine();
+            // Finish typing instantly
+            StopCoroutine(typingCoroutine);
+            dialogueText.text = currentSection[index];
+            isTyping = false;
         }
         else
         {
-            EndDialogue();
+            // Move to next line
+            index++;
+            if (index < currentSection.Count)
+            {
+                ShowLine();
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
     }
 
     private void EndDialogue()
     {
         dialoguePanel.SetActive(false);
-        isActive = false;
     }
 }
