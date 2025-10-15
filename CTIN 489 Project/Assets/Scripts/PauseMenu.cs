@@ -4,31 +4,38 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuObj;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public BubbleSpawner bubbleSpawner;
+    public PlayerMovement player;
+
     void Start()
     {
         PauseMenuObj.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !PauseMenuObj.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseMenuObj.SetActive(true);
+            bool newState = !PauseMenuObj.activeSelf;
+            PauseMenuObj.SetActive(newState);
+            player.enabled = false;
+
+            if (newState)
+                bubbleSpawner.StartSpawning();
+            else
+                bubbleSpawner.StopSpawning();
         }
     }
 
     public void OnResume()
     {
         PauseMenuObj.SetActive(false);
+        bubbleSpawner.StopSpawning();
+        player.enabled = true;
 
-        // Destroying all bubbles in the scene
         GameObject[] bubbles = GameObject.FindGameObjectsWithTag("Bubble");
         foreach (GameObject bubble in bubbles)
-        {
             Destroy(bubble);
-        }
     }
 
     public void OnRestart()
