@@ -12,12 +12,15 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue Settings")]
     public float typingSpeed = 0.05f;
+    [Tooltip("How long to wait before automatically moving to the next line.")]
+    public float autoProgressDelay = 2f;
 
     private Dictionary<string, List<string>> dialogueSections = new();
     private List<string> currentSection;
     private int index;
     private bool isTyping = false;
     private Coroutine typingCoroutine;
+    private Coroutine autoProgressCoroutine;
 
     public bool IsDialogueActive => dialoguePanel.activeSelf;
     public string CurrentSection { get; private set; }
@@ -81,6 +84,9 @@ public class DialogueManager : MonoBehaviour
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
+        if (autoProgressCoroutine != null)
+            StopCoroutine(autoProgressCoroutine);
+
         typingCoroutine = StartCoroutine(TypeLine(currentSection[index]));
     }
 
@@ -96,29 +102,41 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        autoProgressCoroutine = StartCoroutine(AutoProgress());
+    }
+
+    private IEnumerator AutoProgress()
+    {
+        yield return new WaitForSeconds(autoProgressDelay);
+
+        if (!isTyping && IsDialogueActive)
+        {
+            index++;
+            if (index < currentSection.Count)
+                ShowLine();
+            else
+                EndDialogue();
+        }
     }
 
     private void OnSpacePressed()
     {
         if (isTyping)
         {
-            // Finish typing instantly
             StopCoroutine(typingCoroutine);
             dialogueText.text = currentSection[index];
             isTyping = false;
         }
         else
         {
-            // Move to next line
+            if (autoProgressCoroutine != null)
+                StopCoroutine(autoProgressCoroutine);
+
             index++;
             if (index < currentSection.Count)
-            {
                 ShowLine();
-            }
             else
-            {
                 EndDialogue();
-            }
         }
     }
 
