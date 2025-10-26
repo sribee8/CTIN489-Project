@@ -35,16 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        // Persist across scenes (only one copy)
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
+
     }
 
     void Start()
@@ -63,16 +55,6 @@ public class PlayerMovement : MonoBehaviour
         respawnMetric = TelemetryManager.instance.CreateAccumulatedMetric("RespawnCount");
 
         // Listen for new scenes (resets timing per scene)
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // Reset the timer for new level
-        windowStartTime = Time.time;
-        respawnPoint = transform.position;
-        windowTimes.Clear();
-        Debug.Log($"Loaded {scene.name}, timer reset.");
     }
 
     void Update()
@@ -106,20 +88,14 @@ public class PlayerMovement : MonoBehaviour
             CleanWindow();
             cleanWindowText.SetActive(false);
         }
+    }
 
-        // Climbing
+    void FixedUpdate()
+    {
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-
-            if (vertical != 0)
-            {
-                rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * climbSpeed);
-            }
-            else
-            {
-                rb.linearVelocity = new Vector2(horizontal * moveSpeed, 0f);
-            }
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * climbSpeed);
         }
         else
         {
@@ -148,13 +124,44 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach (ContactPoint2D contact in collision.contacts)
+        CheckGroundCollision(collision);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        CheckGroundCollision(collision);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            if (contact.normal.y > 0.5f)
+            // Wait to see if any other ground contact remains
+            StartCoroutine(ResetGroundedAfterFrame());
+        }
+    }
+
+    void CheckGroundCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            foreach (ContactPoint2D contact in collision.contacts)
             {
-                isGrounded = true;
+                // Ground normal points up (avoid slopes or walls)
+                if (contact.normal.y > 0.5f)
+                {
+                    isGrounded = true;
+                    return;
+                }
             }
         }
+    }
+
+    // Small delay to avoid flicker on exit
+    System.Collections.IEnumerator ResetGroundedAfterFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        isGrounded = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -191,14 +198,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isClimbing = false;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
         }
     }
 

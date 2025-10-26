@@ -18,6 +18,6 @@ public class StartButton : MonoBehaviour
 
     public void OnStartClick()
     {
-        SceneManager.LoadScene("VerticalSlice");
+        SceneManager.LoadScene("Tutorial");
     }
 }

@@ -21,12 +21,12 @@ public class WaterManager : MonoBehaviour
 
     public bool canClean()
     {
-        return numWater == maxWater;
+        return numWater >= maxWater;
     }
 
     public void clearWater()
     {
         numWater -= 2;
-        bottle.sprite = watSprites[numWater];
+        bottle.sprite = watSprites[Mathf.Min(numWater, 2)];
     }
 }

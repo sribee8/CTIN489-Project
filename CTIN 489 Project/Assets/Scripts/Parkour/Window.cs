@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Window : MonoBehaviour
 {
-    bool cleaned;
+    public bool cleaned;
     public GameObject graffitiRM;
     public GameObject windowBG;
     public GameObject windowGraffiti;
