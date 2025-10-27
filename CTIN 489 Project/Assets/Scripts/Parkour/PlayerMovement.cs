@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float climbSpeed = 4f;
 
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     private float horizontal;
     private float vertical;
     private bool isGrounded;
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         respawnPoint = transform.position;
         cleanWindowText.SetActive(false);
         nearWindow = false;
@@ -62,6 +64,12 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        // Flip sprite based on horizontal movement
+        if (horizontal > 0.01f)
+            spriteRenderer.flipX = false;  // facing right
+        else if (horizontal < -0.01f)
+            spriteRenderer.flipX = true;   // facing left
 
         // Jumping
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
