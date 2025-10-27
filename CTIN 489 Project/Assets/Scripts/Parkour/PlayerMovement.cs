@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Window currWindow;
     private bool nearWindow;
+    public int numCleaned = 0;
 
     // Timing and telemetry
     private float windowStartTime;
@@ -110,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         playerAudio.PlayCleanWindow();
         respawnPoint = transform.position;
         currWindow.LoadWindowCleaning();
+        numCleaned++;
 
         // Calculate time to reach this window
         float windowTime = Time.time - windowStartTime;

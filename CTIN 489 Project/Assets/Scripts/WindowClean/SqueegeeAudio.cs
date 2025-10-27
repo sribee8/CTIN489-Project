@@ -3,8 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SqueegeeAudio : MonoBehaviour
 {
-    [Header("Refs")]
-    public BoxCollider2D paneCollider;
 
     [Header("Speed to sound")]
     public float minSpeed = 0.3f;
@@ -59,8 +57,6 @@ public class SqueegeeAudio : MonoBehaviour
         if (!src) return;
 
         bool dragging = Input.GetMouseButton(0);
-        if (paneCollider)
-            dragging &= paneCollider.OverlapPoint(transform.position);
 
         float speed = 0f;
         if (hadLast)
@@ -70,10 +66,10 @@ public class SqueegeeAudio : MonoBehaviour
 
         float t = Mathf.InverseLerp(minSpeed, maxSpeed, speed);
 
-        float targetPitch  = Mathf.Lerp(minPitch,  maxPitch,  t);
+        float targetPitch = Mathf.Lerp(minPitch, maxPitch, t);
         float targetVolume = dragging ? Mathf.Lerp(minVolume, maxVolume, t) : 0f;
 
-        src.pitch  = Mathf.Lerp(src.pitch, targetPitch,  pitchLerp * Time.deltaTime);
+        src.pitch = Mathf.Lerp(src.pitch, targetPitch, pitchLerp * Time.deltaTime);
         float fadeRate = (fadeTime > 0f) ? (1f / fadeTime) : 999f;
         src.volume = Mathf.MoveTowards(src.volume, targetVolume, fadeRate * Time.deltaTime);
 

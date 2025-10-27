@@ -1,0 +1,19 @@
+[Intro]
+To quickly advance through dialogue press [T].
+To move, use [A] and [D] or arrow keys.
+To jump, use [Space].
+Try to interact with things! [E].
+Finally, there may be ladders [W] and [S].
+You: I need to clean this window but I don't have enough water.
+You: Looks like I need to collect 2 water drops.
+
+[Window1]
+You: Wow! It's time to clean.
+To clean a window, click and drag your cursor on the grime.
+
+[Window1Fin]
+You: Wow it's so clean now!
+NPC: Thank you so much!
+You: It's time to head to the village!
+You: I have two windows to clean there.
+

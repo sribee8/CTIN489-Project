@@ -40,7 +40,6 @@ public class PauseMenu : MonoBehaviour
 
     public void OnRestart()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        SceneManager.LoadScene("StartScreen");
     }
 }

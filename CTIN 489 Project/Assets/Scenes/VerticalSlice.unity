@@ -174,6 +174,7 @@ MonoBehaviour:
   dialogueText: {fileID: 2140920109}
   dialogueFile: {fileID: 4900000, guid: 2a615c0187baf4c45addda6565c6a392, type: 3}
   typingSpeed: 0.05
+  autoProgressDelay: 2
 --- !u!114 &21303000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe108cced184b4eaa0722192ab3448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cleaned: 0
   graffitiRM: {fileID: 1615423775}
   windowBG: {fileID: 1591054525}
   windowGraffiti: {fileID: 605746617}
@@ -14206,6 +14208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fe108cced184b4eaa0722192ab3448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cleaned: 0
   graffitiRM: {fileID: 1403795947}
   windowBG: {fileID: 1146608707}
   windowGraffiti: {fileID: 198345344}
@@ -14648,10 +14651,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 796029504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c2b424f348441a1ae9ae88cce0cbe0, type: 3}
+  m_Script: {fileID: 11500000, guid: 015a61bf8e9da3f46820acbf64a8bf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paneCollider: {fileID: 0}
   minSpeed: 0.3
   maxSpeed: 3
   minPitch: 0.9
@@ -14893,7 +14895,7 @@ GameObject:
   - component: {fileID: 836879565}
   m_Layer: 0
   m_Name: Trees
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14977,11 +14979,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
+    - - {x: 2.306015, y: 2.3395286}
+      - {x: -0.3900299, y: 2.1878207}
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+      - {x: -0.3872894, y: -1.5358927}
+      - {x: 2.7615318, y: -1.5983844}
+      - {x: 3.9649267, y: 0.2381022}
   m_UseDelaunayMesh: 0
 --- !u!1 &858816274
 GameObject:
@@ -15127,9 +15131,10 @@ GameObject:
   m_Component:
   - component: {fileID: 861500577}
   - component: {fileID: 861500576}
+  - component: {fileID: 861500578}
   m_Layer: 0
   m_Name: Bench_0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15204,6 +15209,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2074801826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &861500578
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861500575}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.58251274}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.15, y: 3.47}
+    newSize: {x: 4.15, y: 3.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.15, y: 2.3049743}
+  m_EdgeRadius: 0
 --- !u!1 &907019038
 GameObject:
   m_ObjectHideFlags: 0
@@ -15328,10 +15379,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 994293459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c2b424f348441a1ae9ae88cce0cbe0, type: 3}
+  m_Script: {fileID: 11500000, guid: 015a61bf8e9da3f46820acbf64a8bf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paneCollider: {fileID: 0}
   minSpeed: 0.3
   maxSpeed: 3
   minPitch: 0.9
@@ -23122,6 +23172,7 @@ GameObject:
   - component: {fileID: 1667502871}
   - component: {fileID: 1667502876}
   - component: {fileID: 1667502877}
+  - component: {fileID: 1667502878}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -23184,6 +23235,7 @@ MonoBehaviour:
   waterMan: {fileID: 1777744573}
   playerAudio: {fileID: 738230521}
   cleanWindowText: {fileID: 105340718}
+  numCleaned: 0
 --- !u!50 &1667502873
 Rigidbody2D:
   serializedVersion: 5
@@ -23316,6 +23368,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1667502878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667502870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d112a4dc8b9e5bb4ba6eea6ee529220b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1667502872}
 --- !u!1 &1683657299
 GameObject:
   m_ObjectHideFlags: 0

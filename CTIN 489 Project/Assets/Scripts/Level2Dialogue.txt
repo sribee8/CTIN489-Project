@@ -1,0 +1,28 @@
+[Intro]
+You: The windows here seem to be pretty high up...
+
+[Platform]
+You: The way down is blocked!
+You: How do I get rid of this platform?
+
+[Window1]
+You: It was really tough collecting water.
+You: I'm also getting bored just cleaning windows.
+
+[Window1Fin]
+You: "Alright I think it's all done"
+NPC: "Thank you so much, it looks great!"
+NPC: "I think there is one more window for you"
+You: I don't know if I want to...
+You: "Ok!"
+
+[Window2]
+You: Do I need to pop these bubbles?
+You: I'm exhausted, it was so hard getting to this window.
+You: I also haven't seen my friends in a while.
+
+[Window2Fin]
+You: I'm done cleaning windows.
+You: That was so tiring.
+You: Rather than feeling helpful...
+You: I just feel lonely.
