@@ -35,6 +35,8 @@ public class Window : MonoBehaviour
         if (cleaned && dialogueManager.CurrentSection == sectionFinish && !dialogueManager.IsDialogueActive)
         {
             windowBG.SetActive(false);
+            player.enabled = true;
+            bottle.SetActive(true);
         }
     }
 
@@ -66,8 +68,6 @@ public class Window : MonoBehaviour
         windowGraffiti.SetActive(false);
         squeegee.SetActive(false);
         dialogueManager.StartSection(sectionFinish);
-        bottle.SetActive(true);
         CleanWindow();
-        player.enabled = true;
     }
 }

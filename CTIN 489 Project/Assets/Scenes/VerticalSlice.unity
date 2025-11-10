@@ -23236,6 +23236,7 @@ MonoBehaviour:
   playerAudio: {fileID: 738230521}
   cleanWindowText: {fileID: 105340718}
   numCleaned: 0
+  isLevel2: 0
 --- !u!50 &1667502873
 Rigidbody2D:
   serializedVersion: 5

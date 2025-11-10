@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cleanWindowText;
 
     private Window currWindow;
+    private BubbleWindow bubbleWindow;
     private bool nearWindow;
     public int numCleaned = 0;
 
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private MetricId respawnMetric;
 
     private static PlayerMovement instance;
+    public bool isLevel2 = true;
 
     void Awake()
     {
@@ -94,8 +96,9 @@ public class PlayerMovement : MonoBehaviour
         // Cleaning window
         if (Input.GetKeyDown(KeyCode.E) && nearWindow)
         {
-            CleanWindow();
             cleanWindowText.SetActive(false);
+            if (!isLevel2) CleanWindow();
+            else CleanBubbleWindow();
         }
     }
 
@@ -130,6 +133,28 @@ public class PlayerMovement : MonoBehaviour
 
         // Reset timer for next window
         windowStartTime = Time.time;
+    }
+
+    void CleanBubbleWindow()
+    {
+        waterMan.clearWater();
+        playerAudio.PlayCleanWindow();
+        respawnPoint = transform.position;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f; // if needed
+        bubbleWindow.LoadBubbleWindowCleaning();
+        numCleaned++;
+
+        // Calculate time to reach this window
+        float windowTime = Time.time - windowStartTime;
+        windowTimes.Add(windowTime);
+        TelemetryManager.instance.AddMetricSample(windowTimeMetric, windowTime);
+
+        Debug.Log($"Window cleaned in {windowTime:F2} seconds.");
+
+        // Reset timer for next window
+        windowStartTime = Time.time;
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -183,10 +208,16 @@ public class PlayerMovement : MonoBehaviour
             playerAudio.PlayPickupWater();
         }
 
-        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && !collision.gameObject.GetComponent<Window>().isClean())
+        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && !isLevel2 && !collision.gameObject.GetComponent<Window>().isClean())
         {
             cleanWindowText.SetActive(true);
             currWindow = collision.gameObject.GetComponent<Window>();
+            nearWindow = true;
+        }
+        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && isLevel2 && !collision.gameObject.GetComponent<BubbleWindow>().isClean())
+        {
+            cleanWindowText.SetActive(true);
+            bubbleWindow = collision.gameObject.GetComponent<BubbleWindow>();
             nearWindow = true;
         }
 
