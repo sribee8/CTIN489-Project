@@ -6225,8 +6225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10edd1aac2b2a8541838a9299d3e3af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 1282463015}
-  areaObject: {fileID: 0}
+  bubblePrefab: {fileID: 4080884538636569528, guid: 9549c39f10be6d34bbcffc36e1aa4cbc, type: 3}
+  areaObject: {fileID: 1282463018}
   bubblesX: 10
   bubblesY: 6
   jitterAmount: 0.3
