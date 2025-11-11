@@ -367,8 +367,8 @@ MonoBehaviour:
   maxPopScale: 2
   basePopSpeed: 0.3
   maxPopSpeed: 0.1
-  minStartScale: 0.75
-  maxStartScale: 1.5
+  minStartScale: 1
+  maxStartScale: 1.75
   minFloatSpeed: 0
   maxFloatSpeed: 0
   popSounds:

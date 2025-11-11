@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BubbleWindow : MonoBehaviour
@@ -132,6 +133,10 @@ public class BubbleWindow : MonoBehaviour
     void CompleteMinigame()
     {
         dialogueManager.StartSection(sectionFinish);
+        if (player.numCleaned == 2)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
         CleanWindow();
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -41,5 +42,15 @@ public class PauseMenu : MonoBehaviour
     public void OnRestart()
     {
         SceneManager.LoadScene("StartScreen");
+    }
+
+    public void OnQuit()
+    {
+        #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+        #else
+        // If running in a built application, quit the application
+        Application.Quit();
+        #endif
     }
 }
