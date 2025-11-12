@@ -2353,9 +2353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bottle: {fileID: 1095599830}
   watSprites:
-  - {fileID: 21300000, guid: 800f822036b591c4fbd285248e2c2bc5, type: 3}
-  - {fileID: 21300000, guid: 7b28e386d37a3594faa1b53e35d0c063, type: 3}
-  - {fileID: 21300000, guid: 1b1bb1960527c89419b611a6a8cc926a, type: 3}
+  - {fileID: 21300000, guid: c5a11c0196efc4dfeae463148d510212, type: 3}
+  - {fileID: 21300000, guid: 37245336b61a944c6b47153550a045ed, type: 3}
+  - {fileID: 21300000, guid: 6f684db72979c479781e423522667709, type: 3}
 --- !u!4 &784606371
 Transform:
   m_ObjectHideFlags: 0
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 800f822036b591c4fbd285248e2c2bc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5a11c0196efc4dfeae463148d510212, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 800f822036b591c4fbd285248e2c2bc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5a11c0196efc4dfeae463148d510212, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88539eede43fff84b9c68750c4cfa18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graffitiTexture: {fileID: 2800000, guid: 70cfb6ca7787b1641b834046b6e90f82, type: 3}
+  graffitiTexture: {fileID: 2800000, guid: d6f895b6095b348b9aa26d42b5622563, type: 3}
   squeegee: {fileID: 324941444}
   headOffset: {x: 0, y: 0}
   headWidthUI: 80
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3157672162518231671, guid: 70cfb6ca7787b1641b834046b6e90f82, type: 3}
+  m_Sprite: {fileID: -5668518402485374812, guid: d6f895b6095b348b9aa26d42b5622563, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2771,9 +2771,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bottle: {fileID: 164343771}
   watSprites:
-  - {fileID: 21300000, guid: 800f822036b591c4fbd285248e2c2bc5, type: 3}
-  - {fileID: 21300000, guid: 7b28e386d37a3594faa1b53e35d0c063, type: 3}
-  - {fileID: 21300000, guid: 1b1bb1960527c89419b611a6a8cc926a, type: 3}
+  - {fileID: 21300000, guid: c5a11c0196efc4dfeae463148d510212, type: 3}
+  - {fileID: 21300000, guid: 37245336b61a944c6b47153550a045ed, type: 3}
+  - {fileID: 21300000, guid: 6f684db72979c479781e423522667709, type: 3}
 --- !u!4 &2045553712
 Transform:
   m_ObjectHideFlags: 0
