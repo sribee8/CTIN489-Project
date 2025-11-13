@@ -9,10 +9,11 @@ public class PlatformMove : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 startPos;
-    private int direction = 1;
+    public int direction = 1;
 
     void Awake()
     {
+
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
         startPos = rb.position;
