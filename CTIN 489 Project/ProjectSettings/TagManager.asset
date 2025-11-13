@@ -10,6 +10,7 @@ TagManager:
   - Tree
   - Ladder
   - Bubble
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (IsDialogueActive && Input.GetKeyDown(KeyCode.T))
+        if (IsDialogueActive && Input.GetKeyDown(KeyCode.F))
         {
             OnSpacePressed();
         }

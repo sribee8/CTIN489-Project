@@ -1,5 +1,5 @@
 [Intro]
-To quickly advance through dialogue press [T].
+To quickly advance through dialogue press [F].
 To move, use [A] and [D] or arrow keys.
 To jump, use [Space].
 Finally, there may be ladders [W] and [S].

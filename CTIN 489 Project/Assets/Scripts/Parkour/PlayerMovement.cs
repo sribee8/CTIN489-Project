@@ -37,10 +37,12 @@ public class PlayerMovement : MonoBehaviour
     private static PlayerMovement instance;
     public bool isLevel2 = true;
 
+    // NEW: Moving platform support
+    private Rigidbody2D currentPlatform;
+
     void Awake()
     {
         instance = this;
-
     }
 
     void Start()
@@ -52,14 +54,10 @@ public class PlayerMovement : MonoBehaviour
         nearWindow = false;
         isClimbing = false;
 
-        // Start timer when level begins
         windowStartTime = Time.time;
 
-        // Create telemetry metrics
         windowTimeMetric = TelemetryManager.instance.CreateSampledMetric<float>("WindowCompletionTime");
         respawnMetric = TelemetryManager.instance.CreateAccumulatedMetric("RespawnCount");
-
-        // Listen for new scenes (resets timing per scene)
     }
 
     void Update()
@@ -67,27 +65,20 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        // Flip sprite based on horizontal movement
+        // Flip sprite
         if (horizontal > 0.01f)
-            spriteRenderer.flipX = false;  // facing right
+            spriteRenderer.flipX = false;
         else if (horizontal < -0.01f)
-            spriteRenderer.flipX = true;   // facing left
+            spriteRenderer.flipX = true;
 
-        // Jumping
+        // Jump
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        // Respawning
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            transform.position = respawnPoint;
-            TelemetryManager.instance.AccumulateMetric(respawnMetric, 1);
-        }
-
-        // Check if fallen
-        if (transform.position.y <= -5)
+        // Respawn
+        if (Input.GetKeyDown(KeyCode.R) || transform.position.y <= -5)
         {
             transform.position = respawnPoint;
             TelemetryManager.instance.AccumulateMetric(respawnMetric, 1);
@@ -104,15 +95,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        Vector2 platformVelocity = currentPlatform != null ? currentPlatform.linearVelocity : Vector2.zero;
+
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * climbSpeed);
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, vertical * climbSpeed) + platformVelocity;
         }
         else
         {
             rb.gravityScale = 1f;
-            rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y) + platformVelocity;
         }
     }
 
@@ -124,14 +117,11 @@ public class PlayerMovement : MonoBehaviour
         currWindow.LoadWindowCleaning();
         numCleaned++;
 
-        // Calculate time to reach this window
         float windowTime = Time.time - windowStartTime;
         windowTimes.Add(windowTime);
         TelemetryManager.instance.AddMetricSample(windowTimeMetric, windowTime);
 
         Debug.Log($"Window cleaned in {windowTime:F2} seconds.");
-
-        // Reset timer for next window
         windowStartTime = Time.time;
     }
 
@@ -141,25 +131,34 @@ public class PlayerMovement : MonoBehaviour
         playerAudio.PlayCleanWindow();
         respawnPoint = transform.position;
         rb.linearVelocity = Vector2.zero;
-        rb.angularVelocity = 0f; // if needed
+        rb.angularVelocity = 0f;
         bubbleWindow.LoadBubbleWindowCleaning();
         numCleaned++;
 
-        // Calculate time to reach this window
         float windowTime = Time.time - windowStartTime;
         windowTimes.Add(windowTime);
         TelemetryManager.instance.AddMetricSample(windowTimeMetric, windowTime);
 
         Debug.Log($"Window cleaned in {windowTime:F2} seconds.");
-
-        // Reset timer for next window
         windowStartTime = Time.time;
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         CheckGroundCollision(collision);
+
+        // Moving platform detection
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    currentPlatform = collision.rigidbody;
+                    break;
+                }
+            }
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -171,18 +170,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            // Wait to see if any other ground contact remains
             StartCoroutine(ResetGroundedAfterFrame());
+        }
+
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            currentPlatform = null;
         }
     }
 
     void CheckGroundCollision(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("MovingPlatform"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                // Ground normal points up (avoid slopes or walls)
                 if (contact.normal.y > 0.5f)
                 {
                     isGrounded = true;
@@ -192,7 +194,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Small delay to avoid flicker on exit
     System.Collections.IEnumerator ResetGroundedAfterFrame()
     {
         yield return new WaitForEndOfFrame();
@@ -201,27 +202,30 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Water"))
+        if (collision.CompareTag("Water"))
         {
             Destroy(collision.transform.parent.gameObject);
             waterMan.addWater();
             playerAudio.PlayPickupWater();
         }
 
-        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && !isLevel2 && !collision.gameObject.GetComponent<Window>().isClean())
+        if (collision.CompareTag("Window") && waterMan.canClean())
         {
-            cleanWindowText.SetActive(true);
-            currWindow = collision.gameObject.GetComponent<Window>();
-            nearWindow = true;
-        }
-        if (collision.gameObject.CompareTag("Window") && waterMan.canClean() && isLevel2 && !collision.gameObject.GetComponent<BubbleWindow>().isClean())
-        {
-            cleanWindowText.SetActive(true);
-            bubbleWindow = collision.gameObject.GetComponent<BubbleWindow>();
-            nearWindow = true;
+            if (!isLevel2 && !collision.GetComponent<Window>().isClean())
+            {
+                cleanWindowText.SetActive(true);
+                currWindow = collision.GetComponent<Window>();
+                nearWindow = true;
+            }
+            else if (isLevel2 && !collision.GetComponent<BubbleWindow>().isClean())
+            {
+                cleanWindowText.SetActive(true);
+                bubbleWindow = collision.GetComponent<BubbleWindow>();
+                nearWindow = true;
+            }
         }
 
-        if (collision.gameObject.CompareTag("Ladder"))
+        if (collision.CompareTag("Ladder"))
         {
             isClimbing = true;
         }
@@ -236,13 +240,12 @@ public class PlayerMovement : MonoBehaviour
             nearWindow = false;
         }
 
-        if (collision.gameObject.CompareTag("Ladder"))
+        if (collision.CompareTag("Ladder"))
         {
             isClimbing = false;
         }
     }
 
-    // Optional helper to view results
     public void PrintAllWindowTimes()
     {
         for (int i = 0; i < windowTimes.Count; i++)
