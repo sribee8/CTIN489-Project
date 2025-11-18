@@ -5979,8 +5979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 4080884538636569528, guid: 9549c39f10be6d34bbcffc36e1aa4cbc, type: 3}
   areaObject: {fileID: 98965647}
-  bubblesX: 8
-  bubblesY: 5
+  bubblesX: 6
+  bubblesY: 4
   jitterAmount: 0.3
   bubbleZ: -3
   useDynamicPrefabPadding: 1
@@ -6169,8 +6169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 4080884538636569528, guid: 9549c39f10be6d34bbcffc36e1aa4cbc, type: 3}
   areaObject: {fileID: 1282463018}
-  bubblesX: 8
-  bubblesY: 5
+  bubblesX: 6
+  bubblesY: 4
   jitterAmount: 0.3
   bubbleZ: -3
   useDynamicPrefabPadding: 1
