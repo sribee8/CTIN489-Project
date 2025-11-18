@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88539eede43fff84b9c68750c4cfa18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graffitiTexture: {fileID: 2800000, guid: d6f895b6095b348b9aa26d42b5622563, type: 3}
+  graffitiTexture: {fileID: 2800000, guid: 2fb8ed11ed8af4d1d96bc2a9c6155179, type: 3}
   squeegee: {fileID: 324941444}
   headOffset: {x: 0, y: 0}
   headWidthUI: 80
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5668518402485374812, guid: d6f895b6095b348b9aa26d42b5622563, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fb8ed11ed8af4d1d96bc2a9c6155179, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
