@@ -37,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         GameObject[] bubbles = GameObject.FindGameObjectsWithTag("Bubble");
         foreach (GameObject bubble in bubbles)
             Destroy(bubble);
+        Debug.Log("Resume Clicked");
     }
 
     public void OnRestart()
