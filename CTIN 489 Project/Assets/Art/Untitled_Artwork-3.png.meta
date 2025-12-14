@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cf0a723694fe4bd4c8c1b08ffae27210
+guid: 9f6ef37c53c9649709d21f8b10b1bca4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7269066870087755600
-    second: AvatarArt_0
+      213: -5776421600631150107
+    second: Untitled_Artwork-3_0
+  - first:
+      213: 2452144241443262777
+    second: Untitled_Artwork-3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AvatarArt_0
+      name: Untitled_Artwork-3_0
       rect:
         serializedVersion: 2
-        x: 537
-        y: 129
-        width: 991
-        height: 1785
+        x: 33
+        y: 415
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05724202ec9e0e460800000000000000
-      internalID: 7269066870087755600
+      spriteID: 5e9ac75b82706dfa0800000000000000
+      internalID: -5776421600631150107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled_Artwork-3_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 45
+        width: 410
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931de311234c70220800000000000000
+      internalID: 2452144241443262777
       vertices: []
       indices: 
       edges: []
@@ -148,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AvatarArt_0: 7269066870087755600
+      Untitled_Artwork-3_0: -5776421600631150107
+      Untitled_Artwork-3_1: 2452144241443262777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
