@@ -5759,7 +5759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91839197fc3ba7419df188649cebd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4.93
+  moveSpeed: 5
   jumpForce: 6
   climbSpeed: 5
   waterMan: {fileID: 784606370}

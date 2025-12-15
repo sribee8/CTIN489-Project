@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 386209}
   - component: {fileID: 386208}
   - component: {fileID: 386207}
-  - component: {fileID: 386206}
   - component: {fileID: 386205}
   m_Layer: 0
   m_Name: Player (2)
@@ -153,21 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d112a4dc8b9e5bb4ba6eea6ee529220b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1667502872}
---- !u!114 &386206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386204}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa5ca584f349e143b7ad5b002279b69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  window: {fileID: 0}
-  dialogue: {fileID: 0}
+  player: {fileID: 386209}
 --- !u!114 &386207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0f26c47a56b02489ffb23ca0d9f568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 21302999}
 --- !u!70 &386208
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -215,8 +200,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.02477312, y: 0.39999998}
-  m_Size: {x: 0.95045376, y: 2.2}
+  m_Offset: {x: -0.014786482, y: -0.029423237}
+  m_Size: {x: 0.49107218, y: 1.3411536}
   m_Direction: 0
 --- !u!114 &386209
 MonoBehaviour:
@@ -230,14 +215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91839197fc3ba7419df188649cebd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4.93
+  moveSpeed: 5
   jumpForce: 6
   climbSpeed: 5
-  waterMan: {fileID: 0}
-  playerAudio: {fileID: 0}
-  cleanWindowText: {fileID: 0}
+  waterMan: {fileID: 1777744573}
+  playerAudio: {fileID: 738230521}
+  cleanWindowText: {fileID: 105340718}
   numCleaned: 0
-  isLevel2: 1
+  isLevel2: 0
 --- !u!50 &386210
 Rigidbody2D:
   serializedVersion: 5
@@ -1115,7 +1100,7 @@ MonoBehaviour:
   bottle: {fileID: 907019038}
   dialogueManager: {fileID: 21302999}
   windowNum: 1
-  player: {fileID: 1667502872}
+  player: {fileID: 386209}
 --- !u!212 &169611840
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15120,7 +15105,7 @@ MonoBehaviour:
   bottle: {fileID: 907019038}
   dialogueManager: {fileID: 21302999}
   windowNum: 2
-  player: {fileID: 1667502872}
+  player: {fileID: 386209}
 --- !u!61 &724127135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23845,7 +23830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuObj: {fileID: 80566424}
   bubbleSpawner: {fileID: 370922794}
-  player: {fileID: 1667502872}
+  player: {fileID: 386209}
 --- !u!4 &1316205543
 Transform:
   m_ObjectHideFlags: 0

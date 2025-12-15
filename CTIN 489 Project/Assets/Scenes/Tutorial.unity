@@ -201,8 +201,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.02477312, y: 0.39999998}
-  m_Size: {x: 0.95045376, y: 2.2}
+  m_Offset: {x: -0.012203693, y: -0.054775476}
+  m_Size: {x: 0.4147253, y: 1.2904491}
   m_Direction: 0
 --- !u!114 &29427852
 MonoBehaviour:
@@ -219,11 +219,11 @@ MonoBehaviour:
   moveSpeed: 4.93
   jumpForce: 6
   climbSpeed: 5
-  waterMan: {fileID: 0}
-  playerAudio: {fileID: 0}
-  cleanWindowText: {fileID: 0}
+  waterMan: {fileID: 2045553711}
+  playerAudio: {fileID: 1884316146}
+  cleanWindowText: {fileID: 995220874}
   numCleaned: 0
-  isLevel2: 1
+  isLevel2: 0
 --- !u!50 &29427853
 Rigidbody2D:
   serializedVersion: 5
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   bottle: {fileID: 164343769}
   dialogueManager: {fileID: 2082977649}
   windowNum: 1
-  player: {fileID: 1920291643}
+  player: {fileID: 29427852}
 --- !u!212 &728729773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2556,7 +2556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuObj: {fileID: 582319688}
   bubbleSpawner: {fileID: 1482509142}
-  player: {fileID: 1920291643}
+  player: {fileID: 29427852}
 --- !u!4 &1471710344
 Transform:
   m_ObjectHideFlags: 0
@@ -3480,7 +3480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabb9a4dbed412644beca1a9d93e9f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1920291646}
+  target: {fileID: 29427854}
   smoothSpeed: 0.125
   offset: {x: 3, y: 1, z: -15}
 --- !u!114 &1884316149
