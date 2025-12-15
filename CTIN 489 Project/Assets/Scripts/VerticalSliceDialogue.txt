@@ -3,16 +3,16 @@ I guess this window looks pretty dirty, I should probably clean it
 
 [Window1]
 You: This person seems to have really neglected this…
-NPC: "Thank you for doing this!"
-NPC: "You’re always so helpful!"
+Emmy: "Thank you for doing this!"
+Emmy: "You’re always so helpful!"
 
 [Window1Fin]
 You: Oh wow, I haven’t seen Teddy in ages
 You: I still remember when her daughter asked for it
 You: I mean how could I say no!
-NPC: "Wow the window looks perfect!"
-NPC: "I think the cafe owner also needed their window cleaned..."
-You: "Ah, ok! I will be right on that!"
+Emmy: "Wow the window looks perfect!"
+Emmy: "I think the cafe owner also needed their window cleaned..."
+Emmy: "Ah, ok! I will be right on that!"
 
 [Window2]
 You: Why do people always vandalize...

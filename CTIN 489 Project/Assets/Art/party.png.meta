@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: 5c279f732641ba246a66db3b957c4ad9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2876409113969650406
+    second: party_0
+  - first:
+      213: 1254575143133043084
+    second: party_1
+  - first:
+      213: 4444686414733898967
+    second: party_2
+  - first:
+      213: 5219669588197214657
+    second: party_3
+  - first:
+      213: -8542644396688929184
+    second: party_4
+  - first:
+      213: 4222092984358762432
+    second: party_5
+  - first:
+      213: -8459259120750175050
+    second: party_6
+  - first:
+      213: -1469956024550300647
+    second: party_7
+  - first:
+      213: 3094678260738563929
+    second: party_8
+  - first:
+      213: -2310032851380847906
+    second: party_9
+  - first:
+      213: -7376952209315295284
+    second: party_10
+  - first:
+      213: -8501119790060358424
+    second: party_11
+  - first:
+      213: 1699646271333249541
+    second: party_12
+  - first:
+      213: 7668291828367289990
+    second: party_13
+  - first:
+      213: -3827262202740781935
+    second: party_14
+  - first:
+      213: -3740857788094306790
+    second: party_15
+  - first:
+      213: 1913897657668067039
+    second: party_16
+  - first:
+      213: 5302951506112668244
+    second: party_17
+  - first:
+      213: -2736645249433563918
+    second: party_18
+  - first:
+      213: 1849034552552862003
+    second: party_19
+  - first:
+      213: -716004026437555333
+    second: party_20
+  - first:
+      213: 127761522823627262
+    second: party_21
+  - first:
+      213: 8293462282334151059
+    second: party_22
+  - first:
+      213: 9177720930609273077
+    second: party_23
+  - first:
+      213: -7721147005896688782
+    second: party_24
+  - first:
+      213: 6825043115010409748
+    second: party_25
+  - first:
+      213: -6159441254019277583
+    second: party_26
+  - first:
+      213: -3014353728860153846
+    second: party_27
+  - first:
+      213: 9190447802048366586
+    second: party_28
+  - first:
+      213: -2080581497928388522
+    second: party_29
+  - first:
+      213: -7812404191310260484
+    second: party_30
+  - first:
+      213: 4781320149243037959
+    second: party_31
+  - first:
+      213: 4244456227274342938
+    second: party_32
+  - first:
+      213: 826965036611134963
+    second: party_33
+  - first:
+      213: -7690699386134871052
+    second: party_34
+  - first:
+      213: -2646050948398101868
+    second: party_35
+  - first:
+      213: -4485099841608689680
+    second: party_36
+  - first:
+      213: 4598611852957933825
+    second: party_37
+  - first:
+      213: 3188217716038160039
+    second: party_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: party_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 303
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea6bda69de0be720800000000000000
+      internalID: 2876409113969650406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 314
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89da761275296110800000000000000
+      internalID: 1254575143133043084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 325
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4f738ceb2bead30800000000000000
+      internalID: 4444686414733898967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 259
+        width: 68
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c98761e5ddff6840800000000000000
+      internalID: 5219669588197214657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 324
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e00ec9e2e627980800000000000000
+      internalID: -8542644396688929184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 310
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c77f5d1333e79a30800000000000000
+      internalID: 4222092984358762432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_6
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 309
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bcd3b416acaa9a80800000000000000
+      internalID: -8459259120750175050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_7
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 303
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914eb39a8caa99be0800000000000000
+      internalID: -1469956024550300647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_8
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 306
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f12795b7182fa20800000000000000
+      internalID: 3094678260738563929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_9
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 296
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda36f95c5d11ffd0800000000000000
+      internalID: -2310032851380847906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 296
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf8ab6ec0dcf9990800000000000000
+      internalID: -7376952209315295284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 287
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4b8608794f50a80800000000000000
+      internalID: -8501119790060358424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 289
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502b2a6574b569710800000000000000
+      internalID: 1699646271333249541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_13
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 296
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68eecdf1ace3b6a60800000000000000
+      internalID: 7668291828367289990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_14
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 298
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c4b57ed45d2eac0800000000000000
+      internalID: -3827262202740781935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_15
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 297
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16a26169adc51cc0800000000000000
+      internalID: -3740857788094306790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 232
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fded1c587c78f8a10800000000000000
+      internalID: 1913897657668067039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 283
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452e7fe6c4ed79940800000000000000
+      internalID: 5302951506112668244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_18
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 284
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc804f15ab750ad0800000000000000
+      internalID: -2736645249433563918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_19
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 288
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3313652012719a910800000000000000
+      internalID: 1849034552552862003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_20
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 291
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ba07aa12e3016f0800000000000000
+      internalID: -716004026437555333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_21
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 263
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef18dd79d66e5c100800000000000000
+      internalID: 127761522823627262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_22
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 286
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391a0a0510c481370800000000000000
+      internalID: 8293462282334151059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_23
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 277
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f812ac8f80dd5f70800000000000000
+      internalID: 9177720930609273077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_24
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 269
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bf4fed4b9f8d490800000000000000
+      internalID: -7721147005896688782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_25
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415cbee6d8c67be50800000000000000
+      internalID: 6825043115010409748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_26
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 277
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc5b4740d4458aa0800000000000000
+      internalID: -6159441254019277583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 278
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a089aeb114dda26d0800000000000000
+      internalID: -3014353728860153846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_28
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 278
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af7ccd735970b8f70800000000000000
+      internalID: 9190447802048366586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_29
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 271
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6507ab9a62a4023e0800000000000000
+      internalID: -2080581497928388522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 28
+        width: 319
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6dd27a7c3c49390800000000000000
+      internalID: -7812404191310260484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_31
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 266
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7098c0dd759aa5240800000000000000
+      internalID: 4781320149243037959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_32
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 263
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12c16b537657ea30800000000000000
+      internalID: 4244456227274342938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_33
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5efd0c158f97b00800000000000000
+      internalID: 826965036611134963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_34
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 262
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3cd17c7a5254590800000000000000
+      internalID: -7690699386134871052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_35
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 265
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a452b8ea6574bd0800000000000000
+      internalID: -2646050948398101868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_36
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 263
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7d0c60579b1c1c0800000000000000
+      internalID: -4485099841608689680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_37
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 268
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1016573ad1d81df30800000000000000
+      internalID: 4598611852957933825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: party_38
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 267
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aecf0fee13de3c20800000000000000
+      internalID: 3188217716038160039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      party_0: 2876409113969650406
+      party_1: 1254575143133043084
+      party_10: -7376952209315295284
+      party_11: -8501119790060358424
+      party_12: 1699646271333249541
+      party_13: 7668291828367289990
+      party_14: -3827262202740781935
+      party_15: -3740857788094306790
+      party_16: 1913897657668067039
+      party_17: 5302951506112668244
+      party_18: -2736645249433563918
+      party_19: 1849034552552862003
+      party_2: 4444686414733898967
+      party_20: -716004026437555333
+      party_21: 127761522823627262
+      party_22: 8293462282334151059
+      party_23: 9177720930609273077
+      party_24: -7721147005896688782
+      party_25: 6825043115010409748
+      party_26: -6159441254019277583
+      party_27: -3014353728860153846
+      party_28: 9190447802048366586
+      party_29: -2080581497928388522
+      party_3: 5219669588197214657
+      party_30: -7812404191310260484
+      party_31: 4781320149243037959
+      party_32: 4244456227274342938
+      party_33: 826965036611134963
+      party_34: -7690699386134871052
+      party_35: -2646050948398101868
+      party_36: -4485099841608689680
+      party_37: 4598611852957933825
+      party_38: 3188217716038160039
+      party_4: -8542644396688929184
+      party_5: 4222092984358762432
+      party_6: -8459259120750175050
+      party_7: -1469956024550300647
+      party_8: 3094678260738563929
+      party_9: -2310032851380847906
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

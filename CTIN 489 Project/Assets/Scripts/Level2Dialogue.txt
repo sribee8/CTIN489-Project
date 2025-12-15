@@ -11,8 +11,8 @@ You: I'm also getting bored just cleaning windows.
 
 [Window1Fin]
 You: "Alright I think it's all done"
-NPC: "Thank you so much, it looks great!"
-NPC: "I think there is one more window for you"
+Saniya: "Thank you so much, it looks great!"
+Saniya: "I think there is one more window for you"
 You: I don't know if I want to...
 You: "Ok!"
 

@@ -12,7 +12,7 @@ To clean a window, click and drag your cursor on the grime.
 
 [Window1Fin]
 You: Wow it's so clean now!
-NPC: Thank you so much!
+Lauren: Thank you so much!
 You: It's time to head to the village!
 You: I have two windows to clean there.
 
